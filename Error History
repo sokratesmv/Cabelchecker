@@ -1,0 +1,5 @@
+Error after innstalling PYQT5
+
+libEGL warning: DRI2: failed to authenticate
+
+** (python3:4063): WARNING **: Error retrieving accessibility bus address: org.freedesktop.DBus.Error.ServiceUnknown: The name org.a11y.Bus was not provided by any .service files
