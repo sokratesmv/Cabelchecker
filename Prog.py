@@ -5,7 +5,7 @@ from SkjermProg import Ui_Form
 import smbus
 import time
 import IO
-import Roof
+#import Roof
 import LR
 
 #bus = smbus.SMBus(0)
