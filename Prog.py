@@ -54,7 +54,7 @@ class MyFirstGuiProgram(Ui_Form):
         LR.check()
         LR_result =LR.LR_result
 
-        for i in range(0,2):
+        for i in range(0,6):
             for a in range(1,8):
                         if LR_result[i][a] == 1:
                             xlabel = getattr(self, "label_"+str(i)+str(a))            
