@@ -1,18 +1,7 @@
-# /etc/init.d/sample.py
-### BEGIN INIT INFO
-# Provides:          sample.py
-# Required-Start:    $remote_fs $syslog
-# Required-Stop:     $remote_fs $syslog
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: Start daemon at boot time
-# Description:       Enable service provided by daemon.
-### END INIT INFO
-
 import test
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
-from SkjermProg import Ui_Form
+from skjerm import Ui_Form
 import smbus
 import time
 import IO
@@ -37,20 +26,43 @@ OLATB  = 0x15
 # Register for inputs
 GPIOA  = 0x12 
 GPIOB  = 0x13
-            
+
+b = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,21,22,23,24,25,31,32,33,34,35,36,37]
+a = [0,1,2,5,6,8,11,12,13,14]      
 class MyFirstGuiProgram(Ui_Form):
     def __init__(self, dialog):
         Ui_Form.__init__(self)
         self.setupUi(dialog)
-        image = QtGui.QImage(QtGui.QImageReader("background.png").read())
-        self.Background.setPixmap(QtGui.QPixmap(image))        
 
-        self.Test1.clicked.connect(self.test_1)
-        #self.Test2.clicked.connect(self.test_2)
-        #self.Test3.clicked.connect(self.test_3)
+        self.Test.clicked.connect(self.test)
+        self.Reset.clicked.connect(self.reset)
         
-    def test_1(self):
+        for i in range(0,10):
+            xsquare = getattr(self, "square_"+str(a[i]))            
+            image = QtGui.QImage(QtGui.QImageReader("square.png").read())
+            xsquare.setPixmap(QtGui.QPixmap(image))
 
+        self.reset()
+        
+    def reset(self):
+
+        for i in range(0,6):
+            for a in range(1,8):
+                xlabel = getattr(self, "label_"+str(i)+str(a))            
+                image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
+                xlabel.setPixmap(QtGui.QPixmap(image))
+                
+        for a in range(0,30):
+            xlabel = getattr(self, "lab_"+str(b[a]))            
+            image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
+            xlabel.setPixmap(QtGui.QPixmap(image))
+
+        image = QtGui.QImage(QtGui.QImageReader("logo.png").read())
+        self.square_3.setPixmap(QtGui.QPixmap(image))
+        image = QtGui.QImage(QtGui.QImageReader("logo.png").read())
+        self.square_9.setPixmap(QtGui.QPixmap(image))
+
+    def test(self):
         LR.check()
         LR_result =LR.LR_result
 
@@ -64,18 +76,14 @@ class MyFirstGuiProgram(Ui_Form):
                             xlabel = getattr(self, "label_"+str(i)+str(a))
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
-
-    #def test_2(self):
-
-    #def test_3(self):
-
+        
         
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     dialog = QtWidgets.QDialog()
 
     prog = MyFirstGuiProgram(dialog)
-
-    dialog.show()
+    #dialog.show()
+    dialog.showFullScreen()
     #sys.exit(app.exec_())
     app.exec_()
