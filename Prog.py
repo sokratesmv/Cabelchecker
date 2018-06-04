@@ -6,7 +6,7 @@ import smbus
 import time
 import IO
 #import Roof
-import LR
+import L123R123
 
 #bus = smbus.SMBus(0)
 bus = smbus.SMBus(1)
@@ -63,7 +63,7 @@ class MyFirstGuiProgram(Ui_Form):
         self.square_9.setPixmap(QtGui.QPixmap(image))
 
     def test(self):
-        LR.check()
+        L123R123.check()
         LR_result =LR.LR_result
 
         for i in range(0,6):
