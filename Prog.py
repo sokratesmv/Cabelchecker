@@ -108,7 +108,7 @@ class MyFirstGuiProgram(Ui_Form):
         Roof_result = Roof.Roof_result
         
         for a in range(23,30):
-                        if Roof_result[a-18] == 1:
+                        if Roof_result[a-23] == 1:
                             xlabel = getattr(self, "lab_"+str(b[a]))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
