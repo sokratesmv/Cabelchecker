@@ -69,7 +69,7 @@ def check():
                 if read == LR_in[out]:
                         ROOF_result[out] = 1
                 if read != LR_in[out]:
-                        ROOf_result[out] = 0
+                        ROOF_result[out] = 0
                 print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", ROOF_result[out])
 
                 out = out + 1
