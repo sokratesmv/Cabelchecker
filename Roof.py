@@ -45,7 +45,7 @@ bus.write_byte_data(adress_23,0x0d,0xff)
 bus.write_byte_data(adress_23,0x0c,0xff)
 
 
-LR_write = [89,81,83,91,84,86,82]
+LR_write = [89,81,83,90,84,86,82]
 LR_read = [49,50,51,52,53,54,55]
 LR_in = [1,2,4,8,16,32,64]
 Roof_result = [0,0,0,0,0,0,0]
