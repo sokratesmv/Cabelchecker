@@ -67,12 +67,12 @@ def check():
                 read = read & 0xff
 
                 if read == LR_in[out]:
-                        Roof_result[out] = 1
+                        ROOF_result[out] = 1
                 if read != LR_in[out]:
-                        Roof_result[out] = 0
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", Roof_result[out])
+                        ROOf_result[out] = 0
+                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", ROOF_result[out])
 
                 out = out + 1
                 
-        return(Roof_result)
+        return(ROOf_result)
 check()
