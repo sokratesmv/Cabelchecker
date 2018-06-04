@@ -64,7 +64,7 @@ class MyFirstGuiProgram(Ui_Form):
 
     def test(self):
         L123R123.check()
-        LR_result =LR.LR_result
+        LR_result =L123R123.LR_result
 
         for i in range(0,6):
             for a in range(1,8):
