@@ -65,6 +65,19 @@ class MyFirstGuiProgram(Ui_Form):
         self.square_9.setPixmap(QtGui.QPixmap(image))
 
     def test(self):
+        ROOF.check()
+        ROOF_result = ROOF.ROOF_result
+        
+        for a in range(23,30):
+                        if ROOF_result[a-23] == 1:
+                            xlabel = getattr(self, "lab_"+str(b[a]))            
+                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                        else:
+                            xlabel = getattr(self, "lab_"+str(b[a]))
+                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                            
         L123R123.check()
         LR_result =L123R123.LR_result
 
@@ -97,21 +110,6 @@ class MyFirstGuiProgram(Ui_Form):
         
         for a in range(18,23):
                         if PW_result[a-18] == 1:
-                            xlabel = getattr(self, "lab_"+str(b[a]))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "lab_"+str(b[a]))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                            
-        bus.write_byte_data(adress_23,IO_DIR_A,0xff)
-         
-        ROOF.check()
-        ROOF_result = ROOF.ROOF_result
-        
-        for a in range(23,30):
-                        if ROOF_result[a-23] == 1:
                             xlabel = getattr(self, "lab_"+str(b[a]))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
