@@ -21,30 +21,6 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-#setting pins as outputs
-bus.write_byte_data(adress_24,IO_DIR_A,0x00)
-bus.write_byte_data(adress_24,IO_DIR_B,0x00)
-bus.write_byte_data(adress_25,IO_DIR_A,0x00)
-bus.write_byte_data(adress_25,IO_DIR_B,0x00)
-#setting pins as pull-up inputs
-bus.write_byte_data(adress_20,IO_DIR_A,0xff)
-bus.write_byte_data(adress_20,IO_DIR_B,0xff)
-bus.write_byte_data(adress_21,IO_DIR_A,0xff)
-bus.write_byte_data(adress_21,IO_DIR_B,0xff)
-bus.write_byte_data(adress_22,IO_DIR_A,0xff)
-bus.write_byte_data(adress_22,IO_DIR_B,0xff)
-bus.write_byte_data(adress_23,IO_DIR_A,0xff)
-bus.write_byte_data(adress_23,IO_DIR_B,0xff)
-bus.write_byte_data(adress_20,0x0d,0xff)
-bus.write_byte_data(adress_20,0x0c,0xff)
-bus.write_byte_data(adress_21,0x0d,0xff)
-bus.write_byte_data(adress_21,0x0c,0xff)
-bus.write_byte_data(adress_22,0x0d,0xff)
-bus.write_byte_data(adress_22,0x0c,0xff)
-bus.write_byte_data(adress_23,0x0d,0xff)
-bus.write_byte_data(adress_23,0x0c,0xff)
-
-
 LR_write = [89,81,83,90,84,86,82]
 LR_read = [49,50,51,52,53,54,55]
 LR_in = [1,2,4,8,16,32,64]
@@ -54,10 +30,28 @@ ROOF_result = [0,0,0,0,0,0,0]
 def check():
         for out in range(0,7):
                 
-                bus.write_byte_data(adress_24,OLATA,0xff)
-                bus.write_byte_data(adress_24,OLATB,0xff)
-                bus.write_byte_data(adress_25,OLATA,0xff)
-                bus.write_byte_data(adress_25,OLATB,0xff)
+                #setting pins as outputs
+                bus.write_byte_data(adress_24,IO_DIR_A,0x00)
+                bus.write_byte_data(adress_24,IO_DIR_B,0x00)
+                bus.write_byte_data(adress_25,IO_DIR_A,0x00)
+                bus.write_byte_data(adress_25,IO_DIR_B,0x00)
+                #setting pins as pull-up inputs
+                bus.write_byte_data(adress_20,IO_DIR_A,0xff)
+                bus.write_byte_data(adress_20,IO_DIR_B,0xff)
+                bus.write_byte_data(adress_21,IO_DIR_A,0xff)
+                bus.write_byte_data(adress_21,IO_DIR_B,0xff)
+                bus.write_byte_data(adress_22,IO_DIR_A,0xff)
+                bus.write_byte_data(adress_22,IO_DIR_B,0xff)
+                bus.write_byte_data(adress_23,IO_DIR_A,0xff)
+                bus.write_byte_data(adress_23,IO_DIR_B,0xff)
+                bus.write_byte_data(adress_20,0x0d,0xff)
+                bus.write_byte_data(adress_20,0x0c,0xff)
+                bus.write_byte_data(adress_21,0x0d,0xff)
+                bus.write_byte_data(adress_21,0x0c,0xff)
+                bus.write_byte_data(adress_22,0x0d,0xff)
+                bus.write_byte_data(adress_22,0x0c,0xff)
+                bus.write_byte_data(adress_23,0x0d,0xff)
+                bus.write_byte_data(adress_23,0x0c,0xff)
 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
                 adress_out,port_out,pin_out = IO.write_pin(LR_write[out])
