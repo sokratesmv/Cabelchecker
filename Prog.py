@@ -96,7 +96,7 @@ class MyFirstGuiProgram(Ui_Form):
         PW_result = PW.PW_result
         
         for a in range(18,23):
-                        if PW_result[a] == 1:
+                        if PW_result[a-18] == 1:
                             xlabel = getattr(self, "lab_"+str(b[a]))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
