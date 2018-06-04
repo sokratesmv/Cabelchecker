@@ -104,18 +104,19 @@ class MyFirstGuiProgram(Ui_Form):
                             xlabel = getattr(self, "lab_"+str(b[a]))
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
-         Roof.check()
-         Roof_result = Roof.Roof_result
+         
+        Roof.check()
+        Roof_result = Roof.Roof_result
         
-         for a in range(23,30):
-                         if Roof_result[a-23] == 1:
-                             xlabel = getattr(self, "lab_"+str(b[a]))            
-                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                             xlabel.setPixmap(QtGui.QPixmap(image))
-                         else:
-                             xlabel = getattr(self, "lab_"+str(b[a]))
-                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                             xlabel.setPixmap(QtGui.QPixmap(image))
+        for a in range(23,30):
+                        if Roof_result[a-23] == 1:
+                            xlabel = getattr(self, "lab_"+str(b[a]))            
+                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                        else:
+                            xlabel = getattr(self, "lab_"+str(b[a]))
+                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
         
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
