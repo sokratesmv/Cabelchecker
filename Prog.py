@@ -5,7 +5,7 @@ from skjerm import Ui_Form
 import smbus
 import time
 import IO
-import Roof
+import ROOF
 import L123R123
 import LR
 import PW
@@ -105,8 +105,8 @@ class MyFirstGuiProgram(Ui_Form):
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
          
-        Roof.check()
-        Roof_result = Roof.Roof_result
+        ROOF.check()
+        Roof_result = ROOF.Roof_result
         
         for a in range(23,30):
                         if Roof_result[a-23] == 1:
