@@ -7,6 +7,7 @@ import time
 import IO
 #import Roof
 import L123R123
+import LR
 
 #bus = smbus.SMBus(0)
 bus = smbus.SMBus(1)
