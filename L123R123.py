@@ -21,29 +21,6 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-#setting pins as outputs
-bus.write_byte_data(adress_24,IO_DIR_A,0x00)
-bus.write_byte_data(adress_24,IO_DIR_B,0x00)
-bus.write_byte_data(adress_25,IO_DIR_A,0x00)
-bus.write_byte_data(adress_25,IO_DIR_B,0x00)
-#setting pins as pull-up inputs
-bus.write_byte_data(adress_20,IO_DIR_A,0xff)
-bus.write_byte_data(adress_20,IO_DIR_B,0xff)
-bus.write_byte_data(adress_21,IO_DIR_A,0xff)
-bus.write_byte_data(adress_21,IO_DIR_B,0xff)
-bus.write_byte_data(adress_22,IO_DIR_A,0xff)
-bus.write_byte_data(adress_22,IO_DIR_B,0xff)
-bus.write_byte_data(adress_23,IO_DIR_A,0xff)
-bus.write_byte_data(adress_23,IO_DIR_B,0xff)
-bus.write_byte_data(adress_20,0x0d,0xff)
-bus.write_byte_data(adress_20,0x0c,0xff)
-bus.write_byte_data(adress_21,0x0d,0xff)
-bus.write_byte_data(adress_21,0x0c,0xff)
-bus.write_byte_data(adress_22,0x0d,0xff)
-bus.write_byte_data(adress_22,0x0c,0xff)
-bus.write_byte_data(adress_23,0x0d,0xff)
-bus.write_byte_data(adress_23,0x0c,0xff)
-
 L1_write = [0,83,83,83,67,66,65,86]
 L1_read = [0,1,2,3,4,5,6,7]
 L1_in = [0,0,0,0,8,16,32,64]
@@ -81,6 +58,29 @@ LR_result = [L1_result,L2_result,L3_result,R1_result,R2_result,R3_result]
 
 #check if cable is OK
 def check():
+        #setting pins as outputs
+        bus.write_byte_data(adress_24,IO_DIR_A,0x00)
+        bus.write_byte_data(adress_24,IO_DIR_B,0x00)
+        bus.write_byte_data(adress_25,IO_DIR_A,0x00)
+        bus.write_byte_data(adress_25,IO_DIR_B,0x00)
+        #setting pins as pull-up inputs
+        bus.write_byte_data(adress_20,IO_DIR_A,0xff)
+        bus.write_byte_data(adress_20,IO_DIR_B,0xff)
+        bus.write_byte_data(adress_21,IO_DIR_A,0xff)
+        bus.write_byte_data(adress_21,IO_DIR_B,0xff)
+        bus.write_byte_data(adress_22,IO_DIR_A,0xff)
+        bus.write_byte_data(adress_22,IO_DIR_B,0xff)
+        bus.write_byte_data(adress_23,IO_DIR_A,0xff)
+        bus.write_byte_data(adress_23,IO_DIR_B,0xff)
+        bus.write_byte_data(adress_20,0x0d,0xff)
+        bus.write_byte_data(adress_20,0x0c,0xff)
+        bus.write_byte_data(adress_21,0x0d,0xff)
+        bus.write_byte_data(adress_21,0x0c,0xff)
+        bus.write_byte_data(adress_22,0x0d,0xff)
+        bus.write_byte_data(adress_22,0x0c,0xff)
+        bus.write_byte_data(adress_23,0x0d,0xff)
+        bus.write_byte_data(adress_23,0x0c,0xff)
+        
         for LR in range(0,6):
                 for out in range(1,8):
                         
