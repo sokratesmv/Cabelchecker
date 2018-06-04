@@ -104,6 +104,8 @@ class MyFirstGuiProgram(Ui_Form):
                             xlabel = getattr(self, "lab_"+str(b[a]))
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
+                            
+        bus.write_byte_data(adress_23,IO_DIR_A,0)
          
         ROOF.check()
         ROOF_result = ROOF.ROOF_result
