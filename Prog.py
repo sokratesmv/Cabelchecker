@@ -137,11 +137,11 @@ class MyFirstGuiProgram(Ui_Form):
         
         for a in range(0,4):
                         if PW_result[a] == 1:
-                            xlabel = getattr(self, "led_"+str(a))            
+                            xlabel = getattr(self, "led_"+str(a+1))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
                         else:
-                            xlabel = getattr(self, "led_"+str(a))
+                            xlabel = getattr(self, "led_"+str(a+1))
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
                             
