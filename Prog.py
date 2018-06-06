@@ -9,6 +9,7 @@ import ROOF
 import L123R123
 import LR
 import PW
+import LED
 
 #bus = smbus.SMBus(0)
 bus = smbus.SMBus(1)
@@ -56,6 +57,11 @@ class MyFirstGuiProgram(Ui_Form):
                 
         for a in range(0,30):
             xlabel = getattr(self, "lab_"+str(b[a]))            
+            image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
+            xlabel.setPixmap(QtGui.QPixmap(image))
+        
+        for a in range(1,5):
+            xlabel = getattr(self, "led_"+str(a))            
             image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
             xlabel.setPixmap(QtGui.QPixmap(image))
 
