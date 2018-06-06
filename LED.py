@@ -84,8 +84,8 @@ def check():
         else:
             LED_result[5] = 1
         
-        print ("result-->", LED_result[5)
-        print ("result-->", LED_result[6)
+        print ("result-->", LED_result[5])
+        print ("result-->", LED_result[6])
         
         return(LED_result)
 check()
