@@ -31,7 +31,9 @@ GPIOA  = 0x12
 GPIOB  = 0x13
 
 b = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,21,22,23,24,25,31,32,33,34,35,36,37]
-a = [0,1,2,5,6,8,11,12,13,14]      
+a = [0,1,2,5,6,8,11,12,13,14]  
+c = [4,10]
+
 class MyFirstGuiProgram(Ui_Form):
     def __init__(self, dialog):
         Ui_Form.__init__(self)
@@ -43,6 +45,11 @@ class MyFirstGuiProgram(Ui_Form):
         for i in range(0,10):
             xsquare = getattr(self, "square_"+str(a[i]))            
             image = QtGui.QImage(QtGui.QImageReader("square.png").read())
+            xsquare.setPixmap(QtGui.QPixmap(image))
+            
+        for i in range(0,2):
+            xsquare = getattr(self, "square_"+str(c[i]))            
+            image = QtGui.QImage(QtGui.QImageReader("square1.png").read())
             xsquare.setPixmap(QtGui.QPixmap(image))
 
         self.reset()
