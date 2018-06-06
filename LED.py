@@ -74,18 +74,18 @@ def check():
 
                 out = out + 1
 
-        if LED_result[0] == 0 and LED_result[3] == 0:
-            LED_result[5] = 0
+        if LED_result[0] == 0 and LED_result[2] == 0:
+            LED_result[4] = 0
         else:
-            LED_result[5] = 1
+            LED_result[4] = 1
 
-        if LED_result[1] == 0 and LED_result[4] == 0:
+        if LED_result[1] == 0 and LED_result[3] == 0:
             LED_result[5] = 0
         else:
             LED_result[5] = 1
         
+        print ("result-->", LED_result[4])
         print ("result-->", LED_result[5])
-        print ("result-->", LED_result[6])
         
         return(LED_result)
 check()
