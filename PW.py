@@ -47,14 +47,14 @@ def check():
         bus.write_byte_data(adress_25,0x0d,0xff)
         bus.write_byte_data(adress_25,0x0c,0xff)
         
-        bus.write_byte_data(adress_20,OLATA,0xff)
-        bus.write_byte_data(adress_20,OLATB,0xff)
-        bus.write_byte_data(adress_21,OLATA,0xff)
-        bus.write_byte_data(adress_21,OLATB,0xff)
-        bus.write_byte_data(adress_22,OLATA,0xff)
-        bus.write_byte_data(adress_22,OLATB,0xff)
-        bus.write_byte_data(adress_23,OLATA,0xff)
-        bus.write_byte_data(adress_23,OLATB,0xff)
+        bus.write_byte_data(adress_20,OLATA,0x00)
+        bus.write_byte_data(adress_20,OLATB,0x00)
+        bus.write_byte_data(adress_21,OLATA,0x00)
+        bus.write_byte_data(adress_21,OLATB,0x00)
+        bus.write_byte_data(adress_22,OLATA,0x00)
+        bus.write_byte_data(adress_22,OLATB,0x00)
+        bus.write_byte_data(adress_23,OLATA,0x00)
+        bus.write_byte_data(adress_23,OLATB,0x00)
         
         for out in range(0,5):
 
