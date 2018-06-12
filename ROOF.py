@@ -74,4 +74,4 @@ def check():
                 out = out + 1
                 
         return(ROOF_result)
-#check()
+check()
