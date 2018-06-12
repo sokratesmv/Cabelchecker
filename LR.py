@@ -49,6 +49,15 @@ def check():
                 bus.write_byte_data(adress_24,0x0c,0xff)
                 bus.write_byte_data(adress_25,0x0d,0xff)
                 bus.write_byte_data(adress_25,0x0c,0xff)
+                
+                bus.write_byte_data(adress_20,OLATA,0xff)
+                bus.write_byte_data(adress_20,OLATB,0xff)
+                bus.write_byte_data(adress_21,OLATA,0xff)
+                bus.write_byte_data(adress_21,OLATB,0xff)
+                bus.write_byte_data(adress_22,OLATA,0xff)
+                bus.write_byte_data(adress_22,OLATB,0xff)
+                bus.write_byte_data(adress_23,OLATA,0xff)
+                bus.write_byte_data(adress_23,OLATB,0xff)
 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
                 adress_out,port_out,pin_out = IO.write_pin(LR_write[out])
