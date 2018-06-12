@@ -30,7 +30,7 @@ PW_result = [0,0,0,0,0]
 def check():
         #setting pins as outputs
         bus.write_byte_data(adress_24,IO_DIR_A,0x00)
-        bus.write_byte_data(adress_24,IO_DIR_B,0x00
+        bus.write_byte_data(adress_24,IO_DIR_B,0x00)
         bus.write_byte_data(adress_25,IO_DIR_A,0x00)
         bus.write_byte_data(adress_25,IO_DIR_B,0x00)
         #setting pins as pull-up inputs
