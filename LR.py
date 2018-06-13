@@ -50,15 +50,14 @@ def check():
         bus.write_byte_data(adress_22,0x0d,0xff)
         bus.write_byte_data(adress_22,0x0c,0xff)
         bus.write_byte_data(adress_23,0x0d,0xff)
-        bus.write_byte_data(adress_23,0x0c,0xff)
-
-                        
-        bus.write_byte_data(adress_24,OLATA,0xff)
-        bus.write_byte_data(adress_24,OLATB,0xff)
-        bus.write_byte_data(adress_25,OLATA,0xff)
-        bus.write_byte_data(adress_25,OLATB,0xff)
+        bus.write_byte_data(adress_23,0x0c,0xff)                        
         
         for out in range(0,18):
+                
+                bus.write_byte_data(adress_24,OLATA,0xff)
+                bus.write_byte_data(adress_24,OLATB,0xff)
+                bus.write_byte_data(adress_25,OLATA,0xff)
+                bus.write_byte_data(adress_25,OLATB,0xff)
                 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
                 adress_out,port_out,pin_out = IO.write_pin(LR_write[out])
