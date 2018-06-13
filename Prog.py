@@ -93,25 +93,24 @@ class MyFirstGuiProgram(Ui_Form):
                             xlabel = getattr(self, "label_"+str(i)+str(a))
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
+        LR.check()
+        LR_result =LR.LR_result
+        
+        for a in range(0,18):
+                        if LR_result[a] == 1:
+                            xlabel = getattr(self, "lab_"+str(b[a]))            
+                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                        else:
+                            xlabel = getattr(self, "lab_"+str(b[a]))
+                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
         
         #ROOF.check()
         #ROOF_result = ROOF.ROOF_result
         
         #for a in range(23,30):
         #                if ROOF_result[a-23] == 1:
-        #                    xlabel = getattr(self, "lab_"+str(b[a]))            
-        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-        #                else:
-        #                    xlabel = getattr(self, "lab_"+str(b[a]))
-        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-        
-        #LR.check()
-        #LR_result =LR.LR_result
-        
-        #for a in range(0,18):
-        #                if LR_result[a] == 1:
         #                    xlabel = getattr(self, "lab_"+str(b[a]))            
         #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
         #                    xlabel.setPixmap(QtGui.QPixmap(image))
