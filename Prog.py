@@ -79,81 +79,81 @@ class MyFirstGuiProgram(Ui_Form):
         self.square_9.setPixmap(QtGui.QPixmap(image))
 
     def test(self):
-        ROOF.check()
-        ROOF_result = ROOF.ROOF_result
+        #ROOF.check()
+        #ROOF_result = ROOF.ROOF_result
         
-        for a in range(23,30):
-                        if ROOF_result[a-23] == 1:
-                            xlabel = getattr(self, "lab_"+str(b[a]))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "lab_"+str(b[a]))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
+        #for a in range(23,30):
+        #                if ROOF_result[a-23] == 1:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
                             
-        L123R123.check()
-        LR_result =L123R123.LR_result
+        #L123R123.check()
+        #LR_result =L123R123.LR_result
 
-        for i in range(0,6):
-            for a in range(1,8):
-                        if LR_result[i][a] == 1:
-                            xlabel = getattr(self, "label_"+str(i)+str(a))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "label_"+str(i)+str(a))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
+        #for i in range(0,6):
+        #    for a in range(1,8):
+        #                if LR_result[i][a] == 1:
+        #                    xlabel = getattr(self, "label_"+str(i)+str(a))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "label_"+str(i)+str(a))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
         
-        LR.check()
-        LR_result =LR.LR_result
+        #LR.check()
+        #LR_result =LR.LR_result
         
-        for a in range(0,18):
-                        if LR_result[a] == 1:
-                            xlabel = getattr(self, "lab_"+str(b[a]))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "lab_"+str(b[a]))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
+        #for a in range(0,18):
+        #                if LR_result[a] == 1:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
                            
-        PW.check()
-        PW_result = PW.PW_result
+        #PW.check()
+        #PW_result = PW.PW_result
         
-        for a in range(18,23):
-                        if PW_result[a-18] == 1:
-                            xlabel = getattr(self, "lab_"+str(b[a]))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "lab_"+str(b[a]))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-          
-        LED.check()
-        LED_result = LED.LED_result
+        #for a in range(18,23):
+        #                if PW_result[a-18] == 1:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "lab_"+str(b[a]))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #  
+        #LED.check()
+        #LED_result = LED.LED_result
         
-        for a in range(0,4):
-                        if LED_result[a] == 1:
-                            xlabel = getattr(self, "led_"+str(a+1))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "led_"+str(a+1))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
+        #for a in range(0,4):
+        #                if LED_result[a] == 1:
+        #                    xlabel = getattr(self, "led_"+str(a+1))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "led_"+str(a+1))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
                             
-        for a in range(4,6):
-                        if LED_result[a] == 1:
-                            xlabel = getattr(self, "lab_"+str(d[a-4]))            
-                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
-                        else:
-                            xlabel = getattr(self, "lab_"+str(d[a-4]))
-                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-                            xlabel.setPixmap(QtGui.QPixmap(image))
+        #for a in range(4,6):
+        #                if LED_result[a] == 1:
+        #                    xlabel = getattr(self, "lab_"+str(d[a-4]))            
+        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
+        #                else:
+        #                    xlabel = getattr(self, "lab_"+str(d[a-4]))
+        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+        #                    xlabel.setPixmap(QtGui.QPixmap(image))
         
         
 if __name__ == '__main__':
