@@ -81,4 +81,4 @@ def check():
                 out = out + 1
                 
         return(LR_result)
-#check()
+check()
