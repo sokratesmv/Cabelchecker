@@ -10,6 +10,7 @@ import L123R123
 import LR
 import PW
 import LED
+import reset
 
 #bus = smbus.SMBus(0)
 bus = smbus.SMBus(1)
@@ -56,6 +57,8 @@ class MyFirstGuiProgram(Ui_Form):
         self.reset()
         
     def reset(self):
+        
+        reset
 
         for i in range(0,6):
             for a in range(1,8):
