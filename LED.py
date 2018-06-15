@@ -93,4 +93,4 @@ def check():
         print ("result-->", LED_result[5])
         
         return(LED_result)
-check()
+#check()
