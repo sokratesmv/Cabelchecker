@@ -75,7 +75,7 @@ def check():
                         LR_result[out] = 1
                 if read != LR_in[out]:
                         LR_result[out] = 0
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LR_result[out])
+                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LR_result[out])
 
                 out = out + 1
                 
