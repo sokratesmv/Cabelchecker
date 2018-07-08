@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Kabeltestar
+Name=Vendanor
+Comment=Vendanor kabelsjekkar
+NoDisplay=false
+Exec=/usr/bin/lxterminal -e /home/pi/Cabelcheck.sh
+NotShowIn=GNOME;KDE;XFCE;
