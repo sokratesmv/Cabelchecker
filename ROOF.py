@@ -21,7 +21,7 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-LR_write = [89,81,83,90,84,86,82]
+LR_write = [89,81,83,94,84,86,82]
 LR_read = [49,50,51,52,53,54,55]
 LR_in = [1,2,4,8,16,32,64]
 ROOF_result = [0,0,0,0,0,0,0]
@@ -72,9 +72,9 @@ def check():
                         ROOF_result[out] = 1
                 if read != LR_in[out]:
                         ROOF_result[out] = 0
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", ROOF_result[out])
+                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", ROOF_result[out])
 
                 out = out + 1
                 
         return(ROOF_result)
-check()
+#check()
