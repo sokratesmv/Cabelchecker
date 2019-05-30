@@ -92,21 +92,21 @@ def check():
         #    LED_result[4] = 1
         
         for a in range(0,6):
-                Led_result[a] = 0
+                LED_result[a] = 0
         
         if LR_in[0] == 2 or LR_in[0] == 10:
-                Led_result[0] = 1
-                Led_result[4] = 1
+                LED_result[0] = 1
+                LED_result[4] = 1
         if LR_in[0] == 8 or LR_in[0] == 10:
-                Led_result[2] = 1
-                Led_result[4] = 1
+                LED_result[2] = 1
+                LED_result[4] = 1
                 
         if LR_in[1] == 1 or LR_in[1] == 5:
-                Led_result[1] = 1
-                Led_result[5] = 1
+                LED_result[1] = 1
+                LED_result[5] = 1
         if LR_in[1] == 4 or LR_in[1] == 5:
-                Led_result[3] = 1
-                Led_result[5] = 1
+                LED_result[3] = 1
+                LED_result[5] = 1
         
         #print ("result-->", LED_result[4])
         #print ("result-->", LED_result[5])
