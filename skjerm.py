@@ -65,7 +65,7 @@ class Ui_Form(object):
         palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.AlternateBase, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0, 128))
         brush.setStyle(QtCore.Qt.NoBrush)
-        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.PlaceholderText, brush)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
         palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.WindowText, brush)
