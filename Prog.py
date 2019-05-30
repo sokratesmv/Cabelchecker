@@ -29,11 +29,11 @@ OLATB  = 0x15
 # Register for inputs
 GPIOA  = 0x12 
 GPIOB  = 0x13
-
-b = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,21,22,23,24,25,31,32,33,34,35,36,37]
+#    0 1 2 3 4 5 6 7 8 9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 34 
+b = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,31,32,33,34,35,36,37]
 a = [0,1,2,5,6,8,11,12,13,14]  
 c = [4,10]
-d = [31,34]
+d = [29,27]
 
 class MyFirstGuiProgram(Ui_Form):
     def __init__(self, dialog):
@@ -63,7 +63,7 @@ class MyFirstGuiProgram(Ui_Form):
                 image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
                 xlabel.setPixmap(QtGui.QPixmap(image))
                 
-        for a in range(0,30):
+        for a in range(0,34):
             xlabel = getattr(self, "lab_"+str(b[a]))            
             image = QtGui.QImage(QtGui.QImageReader("gray.png").read())
             xlabel.setPixmap(QtGui.QPixmap(image))
@@ -97,7 +97,7 @@ class MyFirstGuiProgram(Ui_Form):
         PW.check()
         PW_result = PW.PW_result
         
-        for a in range(18,23):
+        for a in range(18,27):
                         if PW_result[a-18] == 1:
                             xlabel = getattr(self, "lab_"+str(b[a]))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
@@ -110,7 +110,7 @@ class MyFirstGuiProgram(Ui_Form):
         ROOF.check()
         ROOF_result = ROOF.ROOF_result
         
-        for a in range(23,30):
+        for a in range(27,34):
                         if ROOF_result[a-23] == 1:
                             xlabel = getattr(self, "lab_"+str(b[a]))            
                             image = QtGui.QImage(QtGui.QImageReader("green.png").read())
