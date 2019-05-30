@@ -29,6 +29,9 @@ LED_result = [0,0,0,0,0,0]
 #check if cable is OK
 def check():
         
+        bus.write_byte_data(adress_25,OLATA,0xff)
+        bus.write_byte_data(adress_25,OLATB,0xff)
+        
         #setting pins as outputs
         bus.write_byte_data(adress_24,IO_DIR_A,0x00)
         bus.write_byte_data(adress_24,IO_DIR_B,0x00)
