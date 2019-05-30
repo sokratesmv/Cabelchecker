@@ -10,6 +10,7 @@ import L123R123
 import LR
 import PW
 import LED
+import Reset
 
 #bus = smbus.SMBus(0)
 bus = smbus.SMBus(1)
@@ -79,6 +80,8 @@ class MyFirstGuiProgram(Ui_Form):
         self.square_9.setPixmap(QtGui.QPixmap(image))
 
     def test(self):
+        
+        Reset.resetPins()
         
         L123R123.check()
         LR_result =L123R123.LR_result
