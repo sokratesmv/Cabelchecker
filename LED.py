@@ -56,6 +56,8 @@ def check():
         bus.write_byte_data(adress_24,OLATB,0xff)
         bus.write_byte_data(adress_25,OLATA,0xff)
         bus.write_byte_data(adress_25,OLATB,0xff)
+        bus.write_byte_data(adress_23,OLATA,0x00)
+        bus.write_byte_data(adress_23,OLATB,0x00)
     
         for out in range(0,2):
 
