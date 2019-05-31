@@ -57,7 +57,7 @@ def check():
         bus.write_byte_data(adress_25,OLATA,0xff)
         bus.write_byte_data(adress_25,OLATB,0xff)
     
-        for out in range(0,2):
+        for out in range(0,4):
 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
                 adress_out,port_out,pin_out = IO.write_pin(LR_write[out])
