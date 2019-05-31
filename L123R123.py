@@ -122,10 +122,10 @@ def check():
                                         LR_result[LR][out] = 1
                                 if read != LR_in[LR][out]:
                                         LR_result[LR][out] = 0
-                        print ("LR_write-->", LR_write[LR][out], "LR_read-->", LR_read[LR][out], "read-->", read, "result-->", LR_result[LR][out])
+                        #print ("LR_write-->", LR_write[LR][out], "LR_read-->", LR_read[LR][out], "read-->", read, "result-->", LR_result[LR][out])
 
                         out = out + 1
                 LR = LR +1
                 
         return(LR_result)
-check()
+#check()

@@ -21,14 +21,14 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-LR_write = [89,90,89,90]
-LR_read = [16,8,32,24]
-LR_in = [128,128,128,128]
+LR_write = [90,89,92,91]
+LR_read = [52,49,52,49]
+LR_in = [8,1,8,1]
 LED_result = [0,0,0,0,0,0]
 
 #check if cable is OK
 def check():
-        
+
         #setting pins as outputs
         bus.write_byte_data(adress_24,IO_DIR_A,0x00)
         bus.write_byte_data(adress_24,IO_DIR_B,0x00)
@@ -71,45 +71,26 @@ def check():
                 read = ~read 
                 read = read & 0xff
 
-                #LR_in[out] = read
-                
                 if read == LR_in[out]:
                         LED_result[out] = 1
                 if read != LR_in[out]:
                         LED_result[out] = 0
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
+                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
 
                 out = out + 1
 
         if LED_result[1] == 0 and LED_result[3] == 0:
-            LED_result[5] = 0
-        else:
-            LED_result[5] = 1
-
-        if LED_result[0] == 0 and LED_result[2] == 0:
             LED_result[4] = 0
         else:
             LED_result[4] = 1
-        
-        #for a in range(0,6):
-        #        LED_result[a] = 0
-        
-        #if LR_in[0] == 2 or LR_in[0] == 10:
-        #        LED_result[0] = 1
-        #        LED_result[4] = 1
-        #if LR_in[0] == 8 or LR_in[0] == 10:
-        #        LED_result[2] = 1
-        #        LED_result[4] = 1
-                
-        #if LR_in[1] == 1 or LR_in[1] == 5:
-        #        LED_result[1] = 1
-        #        LED_result[5] = 1
-        #if LR_in[1] == 4 or LR_in[1] == 5:
-        #        LED_result[3] = 1
-        #        LED_result[5] = 1
+
+        if LED_result[0] == 0 and LED_result[2] == 0:
+            LED_result[5] = 0
+        else:
+            LED_result[5] = 1
         
         #print ("result-->", LED_result[4])
         #print ("result-->", LED_result[5])
         
         return(LED_result)
-check()
+#check()
