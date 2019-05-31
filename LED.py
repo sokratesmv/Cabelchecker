@@ -71,7 +71,7 @@ def check():
                 read = ~read 
                 read = read & 0xff
 
-                LR_in[out] = read
+                #LR_in[out] = read
                 
                 if read == LR_in[out]:
                         LED_result[out] = 1
