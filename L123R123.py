@@ -82,7 +82,7 @@ def check():
         bus.write_byte_data(adress_23,0x0c,0xff)
         
         for LR in range(0,6):
-                for out in range(1,8):
+                for out in range(1,7):
                         
                         bus.write_byte_data(adress_24,OLATA,0xff)
                         bus.write_byte_data(adress_24,OLATB,0xff)
