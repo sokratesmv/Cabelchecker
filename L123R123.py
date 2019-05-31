@@ -82,7 +82,7 @@ def check():
         bus.write_byte_data(adress_23,0x0c,0xff)
         
         for LR in range(0,6):
-                for out in range(1,7):
+                for out in range(1,8):
                         
                         bus.write_byte_data(adress_24,OLATA,0xff)
                         bus.write_byte_data(adress_24,OLATB,0xff)
@@ -122,7 +122,7 @@ def check():
                                         LR_result[LR][out] = 1
                                 if read != LR_in[LR][out]:
                                         LR_result[LR][out] = 0
-                        #print ("LR_write-->", LR_write[LR][out], "LR_read-->", LR_read[LR][out], "read-->", read, "result-->", LR_result[LR][out])
+                        print ("LR_write-->", LR_write[LR][out], "LR_read-->", LR_read[LR][out], "read-->", read, "result-->", LR_result[LR][out])
 
                         out = out + 1
                 LR = LR +1
