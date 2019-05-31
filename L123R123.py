@@ -128,4 +128,4 @@ def check():
                 LR = LR +1
                 
         return(LR_result)
-#check()
+check()
