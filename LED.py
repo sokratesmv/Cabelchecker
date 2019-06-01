@@ -93,27 +93,11 @@ def check():
                         if read == 8 or read == 10:
                                 LED_result[out] = 1
                         else:
-                                LED_result[out] = 0                
-                #if read == LR_in[out]:
-                #        LED_result[out] = 1
-                #if read != LR_in[out]:
-                #        LED_result[out] = 0
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
+                                LED_result[out] = 0     
+                                
+                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
 
                 out = out + 1
 
-        #if LED_result[1] == 0 and LED_result[3] == 0:
-        #    LED_result[4] = 0
-        #else:
-        #    LED_result[4] = 1#
-
-        #if LED_result[0] == 0 and LED_result[2] == 0:
-        #    LED_result[5] = 0
-        #else:
-        #    LED_result[5] = 1
-        
-        #print ("result-->", LED_result[4])
-        #print ("result-->", LED_result[5])
-        
         return(LED_result)
-check()
+#check()
