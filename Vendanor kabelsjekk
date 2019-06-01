@@ -2,6 +2,6 @@
 [Desktop Entry]
 Name=Quake 3 Arena
 
-Exec=/home/pi/Cabelcheck.sh
+Exec=/usr/bin/lxterminal -e /home/pi/Cabelcheck.sh
 Type=Application
 Categories=None;
