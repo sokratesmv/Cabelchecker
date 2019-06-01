@@ -133,16 +133,6 @@ class MyFirstGuiProgram(Ui_Form):
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
                             
-        #for a in range(4,6):
-        #                if LED_result[a] == 1:
-        #                    xlabel = getattr(self, "lab_"+str(d[a-4]))            
-        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-        #                else:
-        #                    xlabel = getattr(self, "lab_"+str(d[a-4]))
-        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-          
         LR.check()
         LR_result =LR.LR_result
         
