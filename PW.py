@@ -21,14 +21,14 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-LR_read = [50,55,51,53,54,52,49]
-LR_write = [81,82,83,84,86,90,89]
+LR_read = [50,55,51,53,54,52,49,57,58]
+LR_write = [81,82,83,84,86,90,89,91,92]
 LR_in = [2,64,4,16,32,8,1]
 PW_result = [0,0,0,0,0,0,0,0,0]
 
 #check if cable is OK
 def check():
-        for out in range(0,7):
+        for out in range(0,9):
                 
                 #setting pins as outputs
                 bus.write_byte_data(adress_24,IO_DIR_A,0x00)
@@ -69,14 +69,28 @@ def check():
                         
                 read = ~read 
                 read = read & 0xff
-
-                if read == LR_in[out]:
-                        PW_result[out] = 1
-                if read != LR_in[out]:
-                        PW_result[out] = 0
-                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", PW_result[out])
+                
+                if out < 7:
+                        if read == LR_in[out]:
+                                PW_result[out] = 1
+                        if read != LR_in[out]:
+                                PW_result[out] = 0
+                
+                elif out == 7:
+                        if read == 1 or read == 4 or read == 5:
+                                PW_result[out] = 1
+                        else:
+                                PW_result[out] = 0   
+                      
+                elif out == 8:
+                        if read == 2 or read == 8 or read == 10:
+                                PW_result[out] = 1
+                        else:
+                                PW_result[out] = 0   
+                        
+                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", PW_result[out])
 
                 out = out + 1
                 
         return(PW_result)
-#check()
+check()
