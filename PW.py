@@ -24,7 +24,7 @@ GPIOB  = 0x13
 LR_read = [50,55,51,53,54,52,49]
 LR_write = [81,82,83,84,86,90,89]
 LR_in = [2,64,4,16,32,8,1]
-PW_result = [0,0,0,0,0,0,0]
+PW_result = [0,0,0,0,0,0,0,0,0]
 
 #check if cable is OK
 def check():
