@@ -55,7 +55,7 @@ def check():
 
                 #bus.write_byte_data(adress_24,OLATA,0xff)
                 #bus.write_byte_data(adress_24,OLATB,0xff)
-                bus.write_byte_data(adress_25,OLATB,0xff)
+                bus.write_byte_data(adress_25,OLATA,0xff)
                 bus.write_byte_data(adress_25,OLATB,0xff)
 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
