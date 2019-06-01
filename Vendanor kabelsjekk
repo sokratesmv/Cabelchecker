@@ -1,7 +1,7 @@
 
 [Desktop Entry]
-Name=Quake 3 Arena
-
+Name=Vendanor kabelsjekk
+Icon=/home/pi/Cabelchecker/shortcut.jpg
 Exec=/usr/bin/lxterminal -e /home/pi/Cabelcheck.sh
 Type=Application
 Categories=None;
