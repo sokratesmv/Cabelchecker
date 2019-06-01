@@ -33,7 +33,7 @@ GPIOB  = 0x13
 b = [1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,21,22,23,24,25,26,27,28,29,31,32,33,34,35,36,37]
 a = [0,1,2,5,6,8,11,12,13,14]  
 c = [4,10]
-d = [31,34]
+
 
 class MyFirstGuiProgram(Ui_Form):
     def __init__(self, dialog):
@@ -120,19 +120,19 @@ class MyFirstGuiProgram(Ui_Form):
                             image = QtGui.QImage(QtGui.QImageReader("red.png").read())
                             xlabel.setPixmap(QtGui.QPixmap(image))
                             
-        #LED.check()
-        #LED_result = LED.LED_result
+        LED.check()
+        LED_result = LED.LED_result
         
-        #for a in range(0,4):
-        #                if LED_result[a] == 1:
-        #                    xlabel = getattr(self, "led_"+str(a+1))            
-        #                    image = QtGui.QImage(QtGui.QImageReader("green.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-        #                else:
-        #                    xlabel = getattr(self, "led_"+str(a+1))
-        #                    image = QtGui.QImage(QtGui.QImageReader("red.png").read())
-        #                    xlabel.setPixmap(QtGui.QPixmap(image))
-        #                    
+        for a in range(0,4):
+                        if LED_result[a] == 1:
+                            xlabel = getattr(self, "led_"+str(a+1))            
+                            image = QtGui.QImage(QtGui.QImageReader("green.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                        else:
+                            xlabel = getattr(self, "led_"+str(a+1))
+                            image = QtGui.QImage(QtGui.QImageReader("red.png").read())
+                            xlabel.setPixmap(QtGui.QPixmap(image))
+                            
         #for a in range(4,6):
         #                if LED_result[a] == 1:
         #                    xlabel = getattr(self, "lab_"+str(d[a-4]))            
