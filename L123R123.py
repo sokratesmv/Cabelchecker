@@ -96,7 +96,7 @@ def check():
                         time.sleep(0.01)
                         read = bus.read_byte_data(adress_in,port_in)
                         time.sleep(0.01)
-                        #bus.write_byte_data(adress_out,port_out,0)
+                        bus.write_byte_data(adress_out,port_out,0)
                         
                         read = ~read 
                         read = read & 0xff
