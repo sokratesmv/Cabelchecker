@@ -21,9 +21,9 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-LR_read = [50,55,51,53,54]
-LR_write = [81,82,83,84,86]
-LR_in = [2,64,4,16,32]
+LR_read = [50,55,51,53,54,52,49]
+LR_write = [81,82,83,84,86,90,89]
+LR_in = [2,64,4,16,32,8,1]
 PW_result = [0,0,0,0,0,0,0]
 
 #check if cable is OK
@@ -56,7 +56,7 @@ def check():
         bus.write_byte_data(adress_25,OLATB,0xff)
         bus.write_byte_data(adress_25,OLATB,0xff)
         
-        for out in range(0,5):
+        for out in range(0,7):
 
                 adress_in,port_in,pin_in = IO.read_pin(LR_read[out])
                 adress_out,port_out,pin_out = IO.write_pin(LR_write[out])
