@@ -88,9 +88,9 @@ def check():
                         else:
                                 PW_result[out] = 0   
                         
-                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", PW_result[out])
+                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", PW_result[out])
 
                 out = out + 1
                 
         return(PW_result)
-check()
+#check()
