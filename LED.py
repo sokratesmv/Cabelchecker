@@ -21,9 +21,9 @@ OLATB  = 0x15
 GPIOA  = 0x12 
 GPIOB  = 0x13
 
-LR_write = [90,89,92,91]
-LR_read = [52,49,52,49]
-LR_in = [8,1,8,1]
+LR_write = [91,92,91,92]
+LR_read = [57,58,59,60]
+#LR_in = [8,1,8,1]
 LED_result = [0,0,0,0,0,0]
 
 #check if cable is OK
@@ -70,27 +70,50 @@ def check():
                         
                 read = ~read 
                 read = read & 0xff
-
-                if read == LR_in[out]:
-                        LED_result[out] = 1
-                if read != LR_in[out]:
-                        LED_result[out] = 0
-                #print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
+                
+                if out == 0:
+                        if read == 1 or read == 5:
+                                LED_result[out] = 1
+                        else:
+                                LED_result[out] = 0
+                                
+                elif out == 1:
+                        if read == 2 or read == 10:
+                                LED_result[out] = 1
+                        else:
+                                LED_result[out] = 0
+                
+                elif out == 2:
+                        if read == 4 or read == 5:
+                                LED_result[out] = 1
+                        else:
+                                LED_result[out] = 0
+                                
+                elif out == 3:
+                        if read == 8 or read == 10:
+                                LED_result[out] = 1
+                        else:
+                                LED_result[out] = 0                
+                #if read == LR_in[out]:
+                #        LED_result[out] = 1
+                #if read != LR_in[out]:
+                #        LED_result[out] = 0
+                print ("LR_write-->", LR_write[out], "LR_read-->", LR_read[out], "read-->", read, "result-->", LED_result[out])
 
                 out = out + 1
 
-        if LED_result[1] == 0 and LED_result[3] == 0:
-            LED_result[4] = 0
-        else:
-            LED_result[4] = 1
+        #if LED_result[1] == 0 and LED_result[3] == 0:
+        #    LED_result[4] = 0
+        #else:
+        #    LED_result[4] = 1#
 
-        if LED_result[0] == 0 and LED_result[2] == 0:
-            LED_result[5] = 0
-        else:
-            LED_result[5] = 1
+        #if LED_result[0] == 0 and LED_result[2] == 0:
+        #    LED_result[5] = 0
+        #else:
+        #    LED_result[5] = 1
         
         #print ("result-->", LED_result[4])
         #print ("result-->", LED_result[5])
         
         return(LED_result)
-#check()
+check()
