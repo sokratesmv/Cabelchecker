@@ -3,10 +3,10 @@
 Enable I2c and remote GPIO on RPI
 
 intalling software:
-git clone https://github.com/Hammerboy1/Cabelchecker.git
+`git clone https://github.com/Hammerboy1/Cabelchecker.git`
 
 installing Pyqt5:
-sudo apt-get install qt5-default pyqt5-dev pyqt5-dev-tools
+`sudo apt-get install qt5-default pyqt5-dev pyqt5-dev-tools`
 
 Copying files to correct location:
 ```bash
@@ -16,4 +16,4 @@ cp ./*Cabelcheck.sh* /home/pi/
 sudo cp ./*Cabelcheck.desktop*  /etc/xdg/autostart
 ```
 
-chmod +x /home/pi/Cabelcheck.sh
+`chmod +x /home/pi/Cabelcheck.sh`
